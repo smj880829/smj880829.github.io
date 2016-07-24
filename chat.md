@@ -1,6 +1,6 @@
 ---
 layout: page
-title: chat_page
+title: chat
 permalink: /chat/
 ---
 <div class='chat' ng-controller='appCtl'>
