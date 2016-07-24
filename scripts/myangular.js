@@ -6,7 +6,7 @@ var app = angular.module('myApp', [], function($interpolateProvider) {
 app.controller('appCtl',['$scope', '$window','socket',  function($scope, $window,socket) {
   $scope.chat_logs = [];
 
-  socket.emit('find_chatlog');
+  socket.emit('event');
 
 
   $scope.insertmsg_angular = function(){
@@ -30,7 +30,7 @@ app.controller('appCtl',['$scope', '$window','socket',  function($scope, $window
 
 
 app.factory('socket', function ($rootScope) {
-  var socket = io.connect('https://smj880829.github.io/');
+  var socket = io.connect('http://ec2-54-199-240-31.ap-northeast-1.compute.amazonaws.com');
   return {
     on: function (eventName, callback) {
       socket.on(eventName, function () {
