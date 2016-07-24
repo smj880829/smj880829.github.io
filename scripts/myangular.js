@@ -1,4 +1,6 @@
-var app = angular.module('myApp', [], function($interpolateProvider) {
+var app = angular.module('myApp', []);
+
+app.config(function($interpolateProvider) {
   $interpolateProvider.startSymbol('[[');
   $interpolateProvider.endSymbol(']]');
 });
@@ -51,18 +53,4 @@ app.factory('socket', function ($rootScope) {
       })
     }
   };
-})
-
-app.directive('myEnter', function () {
-    return function (scope, element, attrs) {
-        element.bind("keydown", function (event) {
-            if(event.which === 13) {
-                scope.$apply(function (){
-                    scope.$eval(attrs.myEnter);
-                });
-
-                event.preventDefault();
-            }
-        });
-    };
 })
