@@ -6,7 +6,7 @@ permalink: /chat/
 <div class='chat' ng-controller='appCtl'>
   <div class="chat_mid">
     <ul class="log">
-      <li ng-repeat='log in chat_logs | reverse'>
+      <li ng-repeat='log in chat_logs'>
         {{log.message}}
     </ul>
   </div>
