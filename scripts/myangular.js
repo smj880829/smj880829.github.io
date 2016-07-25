@@ -31,6 +31,10 @@ app.controller('appCtl',['$scope', '$window','socket','$anchorScroll','$location
         socket.emit('wow');
       }
 
+      socket.on('wow', function (data) {
+        $window.alert(data)
+      });
+
   }]
 )
 
