@@ -3,7 +3,7 @@ layout: page
 title: chat
 permalink: /chat/
 ---
-asdasdasdasd
+
 
 <div ng-controller='appCtl'>
         <input type="text" class="form-control" ng-model="msg" my-Enter="insertmsg_angular()">
