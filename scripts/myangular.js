@@ -1,8 +1,11 @@
 var app = angular.module('myApp', []);
 
-app.config(function($interpolateProvider) {
+app.config(function($interpolateProvider,$httpProvider) {
   $interpolateProvider.startSymbol('[[');
   $interpolateProvider.endSymbol(']]');
+
+  $httpProvider.defaults.useXDomain = true;
+  delete $httpProvider.defaults.headers.common['X-Requested-With'];
 });
 
 app.controller('appCtl',['$scope', '$window','socket',  function($scope, $window,socket) {
