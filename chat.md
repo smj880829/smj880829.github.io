@@ -3,11 +3,12 @@ layout: page
 title: chat
 permalink: /chat/
 ---
-
-
 <div ng-controller='appCtl'>
-      <div class='row'>
-        <input type="text" class="form-control" ng-model="msg" my-Enter="insertmsg_angular()">
-        <button type="button" class="btn btn-primary center-block" ng-click='insertmsg_angular()' >채팅 보내기</button>
-      </div>
+<form class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputName2">Name</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+  </div>
+  <button type="button" class="btn btn-default">Send invitation</button>
+</form>
 </div>
