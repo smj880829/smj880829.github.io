@@ -32,7 +32,7 @@ app.controller('appCtl',['$scope', '$window','socket',  function($scope, $window
 
 
 app.factory('socket', function ($rootScope) {
-  var socket = io.connect('https://ec2-54-199-240-31.ap-northeast-1.compute.amazonaws.com:443' , {secure: true});
+  var socket = io.connect('https://ec2-54-199-240-31.ap-northeast-1.compute.amazonaws.com:8080' , {secure: true});
   return {
     on: function (eventName, callback) {
       socket.on(eventName, function () {

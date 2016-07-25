@@ -7,7 +7,7 @@ permalink: /chat/
   <div class="chat_mid">
     <ul class="log">
       <li ng-repeat='log in chat_logs'>
-        {{log.message}}
+        [[log.message]]
     </ul>
   </div>
 
