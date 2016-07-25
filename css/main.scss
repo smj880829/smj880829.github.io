@@ -56,29 +56,30 @@ $on-laptop:        800px;
  * chat
  */
 .chat{
-   width : 80%;
-   position:fixed;
-   height: 100%;
+   height: 300px;
+   overflow: auto;
 }
 
- .log{
-   position:relative;
+#chat_bottom {
    bottom: 0px;
- }
+}
 
- .chat_mid{
-   height : 80%;
-   bottom: 100px;
-   border : solid 1px #ccc;
-   border-radius: 10px;
- }
+/*
+ * animation
+ */
 
- .chat_bot{
-   padding-top: 15px;
-   height: 100px;
-   bottom: 0px;
- }
+.sample-show-hide {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid black;
+  background: white;
+  border-radius: 10px;
+}
 
- .chat_op{
-    padding :0px;
- }
+.sample-show-hide {
+  transition: all linear 0.5s;
+}
+
+.sample-show-hide.ng-hide {
+  opacity: 0;
+}

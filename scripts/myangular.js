@@ -1,4 +1,4 @@
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ngAnimate']);
 
 app.config(function($interpolateProvider,$httpProvider) {
   $interpolateProvider.startSymbol('[[');
@@ -6,31 +6,32 @@ app.config(function($interpolateProvider,$httpProvider) {
 
   $httpProvider.defaults.useXDomain = true;
   delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
 });
 
-app.controller('appCtl',['$scope', '$window','socket',  function($scope, $window,socket) {
-  $scope.chat_logs = [];
+app.controller('appCtl',['$scope', '$window','socket','$anchorScroll','$location',  function($scope, $window,socket,$anchorScroll,$location) {
+  $scope.logs = []
 
-  socket.emit('event');
+  $scope.gotoBottom = function() {
+    $location.hash('chat_bottom');
+    $anchorScroll();
+  }
 
-
-  $scope.insertmsg_angular = function(){
-    var query = {'message' : $scope.msg};
-      socket.emit('insert_chatlog', query);
-      $scope.msg ="";
-
-      socket.emit('find_chatlog');
+  $scope.chat_push = function(){
+    $scope.logs.push({"message": $scope.message})
+    $scope.message ="";
+    $scope.gotoBottom();
     }
 
-  socket.on('replace_chatlog', function (data) {
-    socket.emit('find_chatlog');
-  });
+  $scope.chat_pop = function(){
+      $scope.logs.shift();
+    }
 
-  socket.on('chat_logs', function (data) {
-    $scope.chat_logs = data;
-  });
+    $scope.send_server = function(){
+        socket.emit('wow');
+      }
 
-}]
+  }]
 )
 
 
@@ -56,4 +57,18 @@ app.factory('socket', function ($rootScope) {
       })
     }
   };
+})
+
+app.directive('myEnter', function () {
+    return function (scope, element, attrs) {
+        element.bind("keydown", function (event) {
+            if(event.which === 13) {
+                scope.$apply(function (){
+                    scope.$eval(attrs.myEnter);
+                });
+
+                event.preventDefault();
+            }
+        });
+    };
 })
