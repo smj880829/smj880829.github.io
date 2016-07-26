@@ -40,7 +40,8 @@ app.controller('appCtl',['$scope', '$window','socket','$anchorScroll','$location
       socket.on('chat_logs', function (data) {
         $scope.logs = []
         $scope.logs = data
-        $location.hash('chat_bottom');
+        $scope.logs.reverse();
+        $scope.gotoBottom();
       });
 
 
@@ -86,3 +87,9 @@ app.directive('myEnter', function () {
         });
     };
 })
+
+app.filter('reverse', function() {
+return function(items) {
+  return items.slice().reverse();
+};
+});
