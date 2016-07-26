@@ -40,6 +40,7 @@ app.controller('appCtl',['$scope', '$window','socket','$anchorScroll','$location
       socket.on('chat_logs', function (data) {
         $scope.logs = []
         $scope.logs = data
+        $location.hash('chat_bottom');
       });
 
 
