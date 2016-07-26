@@ -1,6 +1,6 @@
 ---
 layout: page
-title: chat
+title: 문의 주세용
 permalink: /chat/
 ---
 <div ng-controller='appCtl'>
