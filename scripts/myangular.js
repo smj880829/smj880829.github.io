@@ -11,13 +11,15 @@ app.config(function($interpolateProvider,$httpProvider) {
 
 app.controller('appCtl',['$scope', '$window','socket','$anchorScroll','$location',  function($scope, $window,socket,$anchorScroll,$location) {
   $scope.logs = []
-
+  $scope.init_chat_log();
+  
   $scope.gotoBottom = function() {
     $location.hash('chat_bottom');
     $anchorScroll();
   }
 
   $scope.chat_push = function(){
+    socket.emit('insert_chatlog',{'message' : $scope.message,'user':'client'});
     $scope.logs.push({"message": $scope.message})
     $scope.message ="";
     $scope.gotoBottom();
@@ -27,13 +29,20 @@ app.controller('appCtl',['$scope', '$window','socket','$anchorScroll','$location
       $scope.logs.shift();
     }
 
-    $scope.send_server = function(){
-        socket.emit('wow');
+    $scope.init_chat_log = function(){
+      $scope.logs = []
+      socket.emit('init_chat_log');
       }
 
       socket.on('alert_msg', function (data) {
         $window.alert(data.msg)
       });
+
+      socket.on('chat_logs', function (data) {
+        $scope.logs = data
+      });
+
+
 
   }]
 )

@@ -25,5 +25,5 @@ permalink: /chat/
     </div>
       <button type="button" class="btn btn-default" ng-click='chat_push()'>Send</button>
 </form>
-  <button type="button" class="btn btn-default" ng-click='send_server()'>event</button>
+  <button type="button" class="btn btn-default" >event</button>
 </div>
