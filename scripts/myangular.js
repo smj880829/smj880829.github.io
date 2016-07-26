@@ -11,8 +11,8 @@ app.config(function($interpolateProvider,$httpProvider) {
 
 app.controller('appCtl',['$scope', '$window','socket','$anchorScroll','$location',  function($scope, $window,socket,$anchorScroll,$location) {
   $scope.logs = []
-  $scope.init_chat_log();
-  
+  socket.emit('init_chat_log');
+
   $scope.gotoBottom = function() {
     $location.hash('chat_bottom');
     $anchorScroll();
@@ -30,7 +30,6 @@ app.controller('appCtl',['$scope', '$window','socket','$anchorScroll','$location
     }
 
     $scope.init_chat_log = function(){
-      $scope.logs = []
       socket.emit('init_chat_log');
       }
 
@@ -39,6 +38,7 @@ app.controller('appCtl',['$scope', '$window','socket','$anchorScroll','$location
       });
 
       socket.on('chat_logs', function (data) {
+        $scope.logs = []
         $scope.logs = data
       });
 
