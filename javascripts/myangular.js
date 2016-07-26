@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngAnimate']);
+var app = angular.module('myApp', ['ngAnimate','ngScrollable']);
 
 app.config(function($interpolateProvider,$httpProvider) {
   $interpolateProvider.startSymbol('[[');
@@ -10,7 +10,7 @@ app.config(function($interpolateProvider,$httpProvider) {
 });
 
 app.controller('appCtl',['$scope', '$window','socket','$anchorScroll','$location',  function($scope, $window,socket,$anchorScroll,$location) {
-  $scope.logs = []
+  $scope.chat_logs = []
   socket.emit('init_chat_log');
 
   $scope.gotoBottom = function() {
@@ -20,13 +20,13 @@ app.controller('appCtl',['$scope', '$window','socket','$anchorScroll','$location
 
   $scope.chat_push = function(){
     socket.emit('insert_chatlog',{'message' : $scope.message,'user':'client'});
-    $scope.logs.push({"message": $scope.message})
+    $scope.chat_logs.push({"message": $scope.message,'user':'client','ali':'right'})
     $scope.message ="";
     $scope.gotoBottom();
     }
 
   $scope.chat_pop = function(){
-      $scope.logs.shift();
+      $scope.chat_logs.shift();
     }
 
     $scope.init_chat_log = function(){
@@ -37,14 +37,27 @@ app.controller('appCtl',['$scope', '$window','socket','$anchorScroll','$location
         $window.alert(data.msg)
       });
 
-      socket.on('chat_logs', function (data) {
-        $scope.logs = []
-        $scope.logs = data
-        $scope.logs.reverse();
+      socket.on('new_chat_log', function (data) {
+        if(data.user == 'client')
+          data.ali = 'right'
+        else
+          data.ali = 'left'
+
+        $scope.chat_logs.push(data)
         $scope.gotoBottom();
       });
 
-
+      socket.on('chat_logs', function (data) {
+        $scope.chat_logs = data
+        for(var i in data)
+        {
+          if(data[i].user == 'client')
+            data[i].ali = 'right'
+          else
+            data[i].ali = 'left'
+        }
+        $scope.chat_logs.reverse();
+      });
 
   }]
 )

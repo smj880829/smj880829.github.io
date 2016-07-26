@@ -5,15 +5,13 @@ permalink: /chat/
 ---
 <div ng-controller='appCtl'>
 
-<div ng-init="checked=true" class='chat' >
-  <label>
-    <input type="checkbox" ng-model="checked" style="float:left; margin-right:10px;"> Is Visible...
-  </label>
-  <div ng-repeat='log in logs'>
-    <div class="check-element sample-show-hide" ng-show="checked" style="clear:both;">
+<div ng-scrollable="{scrollX:'none'}" class='chat' >
+  <div class="ani-repeat" ng-repeat='log in chat_logs' align='[[log.ali]]'>
+    <div class="log"  >
       [[log.message]]
     </div>
   </div>
+
   <div id="chat_bottom">
   </div>
 </div>
@@ -25,5 +23,5 @@ permalink: /chat/
     </div>
       <button type="button" class="btn btn-default" ng-click='chat_push()'>Send</button>
 </form>
-  <button type="button" class="btn btn-default" >event</button>
+
 </div>
