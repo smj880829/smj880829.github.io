@@ -11,5 +11,8 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
-
+  {{ }}
+  {% for cate in page.categories %}
+    {{cate}} ,
+  {% endfor %}
 </article>

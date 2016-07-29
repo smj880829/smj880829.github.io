@@ -2,6 +2,7 @@
 layout: page
 title: CHAT
 permalink: /chat/
+wow: "개발자에게 연락하기"
 ---
 <div ng-controller='appCtl'>
 

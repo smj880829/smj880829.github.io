@@ -2,12 +2,13 @@
 layout: post
 title:  "session 과 engin view"
 date:   2016-07-29 15:33:09 +0900
-categories: single_chat
+categories: [single_chat,session,view]
 ---
 1. 로그인 세션
 예전에 JSP 페이지에서 로그인 세션 작업보다는 확실히 편함.
 express의 라우팅 기능이 상당히 좋아보이는 것을 느낌.
 
+페이스북 로그인 하고싶다 REAL
 
 
 2. engin view 를 html 에서  ejs로 변경
@@ -21,3 +22,8 @@ view 엔진을 사용하면 하나의 페이지를 가지고
 angularjs의 view 기능은 싱글페이지를 위한 기능으로
 받아온 정적인 페이지를 좀더 동적인 기능을 추가하기 위한 기능.
 => 기존의 싱글뷰를 위한 라우팅 기능
+
+3. http://codepen.io/ 로그인 페이지를 가져온 싸이트.
+
+상당히 이쁜 템플릿듯이 많긴하지만
+저작권이 어떻게 되있는지는 나도모름
