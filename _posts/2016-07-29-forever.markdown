@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "forever"
+date:   2016-07-24 15:33:09 +0900
+categories: forever
+---
+Installing locally
+
+[ghost@amayem ghost]$ npm install forever
+
+It worked this time. Let’s give forever a try.
+
+
+[ghost@amayem ghost]$ forever start index.js
+
+bash: forever: command not found
+This is the concequence of the local install. We have to actually run the bin that is in the node_modules directory:
+
+[ghost@amayem ghost]$ ./node_modules/forever/bin/forever start index.js
+
+warn:    --minUptime not set. Defaulting to: 1000ms
+warn:    --spinSleepTime not set. Your script will exit if it does not stay up for at least 1000ms
+info:    Forever processing file: index.js
+It worked, but wouldn’t it be much better if we could use forever without having to find it deep in the directory structure. We will need to switch to the sudo user in that case. Let’s stop the forever process before installing globally.
+
+[ghost@amayem ghost]$ ./node_modules/forever/bin/forever stopall
+
+info:    Forever stopped processes:
+data:        uid  command       script   forever pid   logfile                       uptime       
+data:    [0] RZRV /usr/bin/node index.js 11940   11942 /home/ghost/.forever/RZRV.log 0:0:5:35.759

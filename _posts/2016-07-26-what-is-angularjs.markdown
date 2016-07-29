@@ -19,7 +19,14 @@ Angularjs 는 당신의 어플리케이션에 확장된 HTML 언어를 제공해
 
 Other frameworks deal with HTML’s shortcomings by either abstracting away HTML, CSS, and/or JavaScript or by providing an imperative way for manipulating the DOM. Neither of these address the root problem that HTML was not designed for dynamic views.
 
-선택적
+대안
 
 다른 프레임워크는 HTML의 단점을 다룬다 . 또한 추상적과 먼 HTML, CSS, 자바스크립트는 필수적으로 DOM을 잘다루어야한다.
 어느 이런한 이야기도 근본적인 문제는 HTML은 다이나믹 뷰를 위해 디자인 되지않았다.
+
+
+<h2>Extensibility</h2>
+
+AngularJS is a toolset for building the framework most suited to your application development. It is fully extensible and works well with other libraries. Every feature can be modified or replaced to suit your unique development workflow and feature needs. Read on to find out how.
+
+확장성
