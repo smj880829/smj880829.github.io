@@ -2,7 +2,7 @@
 layout: post
 title:  "forever"
 date:   2016-07-24 15:33:09 +0900
-categories: forever
+categories: single_chat
 ---
 Installing locally
 
