@@ -11,7 +11,7 @@ Installing locally
 It worked this time. Let’s give forever a try.
 
 
-<div class='point'>[ghost@amayem ghost]$ forever start index.js<div>
+<div class='point'>[ghost@amayem ghost]$ forever start index.js</div>
 
 bash: forever: command not found
 This is the concequence of the local install. We have to actually run the bin that is in the node_modules directory:
