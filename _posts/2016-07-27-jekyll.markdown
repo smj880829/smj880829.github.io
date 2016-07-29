@@ -4,12 +4,12 @@ title:  "jekyll 만들기"
 date:   2016-07-28 15:33:09 +0900
 categories: single_chat
 ---
-1. jekyll 생성
+<h2> jekyll 생성</h2>
 
 git Page 기능과 같이 쓸수 있는점이 상당히 좋음.
 
 
-2. 문제 발생 = 채팅 기능 삽입
+<h2>문제 발생 = 채팅 기능 삽입</h2>
 
 채팅 기능을 삽입할때 문제점 발생.
 깃페이지는 https 로 접속.
