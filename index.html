@@ -9,7 +9,7 @@ layout: default
     {% for my_page in site.pages %}
       {% if my_page.title %}
       <li>
-        <div class="post-link"> {{ my_page.title }} </div>
+        <a class="post-link" href="{{my_page.url}}"> {{ my_page.title }} </a>
         {{ my_page.wow }}
       </li>
       {% endif %}
