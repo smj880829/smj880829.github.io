@@ -19,3 +19,5 @@ wow: "single_chat 프로젝트 일지"
     </li>
   {% endfor %}
 </ul>
+
+<a href="http://54.199.240.31/"> 페이지 보러가기 </a>
