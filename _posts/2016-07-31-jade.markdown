@@ -7,6 +7,7 @@ categories: [javis,jade]
 제이드는 Haml로부터 큰 영향을 받은 고성능 템플릿 엔진이며 node를 위해 자바스크립트로 구현되었다.
 
 설치 방법
+
 ```
 npm install jade
 ```
@@ -18,7 +19,9 @@ npm install jade
 4. 파라미터를 통해 소스내부를 동적으로 수정 가능하다.
 5. each 문을 통해 그리드 데이터를 입력 할수 있다.
 
+
 layout.jade
+
 ```
 doctype html
 html(ng-app='mainApp')
@@ -29,6 +32,7 @@ html(ng-app='mainApp')
 ```
 
 index.jade
+
 ```
 extends layout
 
