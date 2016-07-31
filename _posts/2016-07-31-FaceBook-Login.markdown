@@ -29,10 +29,10 @@ $window.fbAsyncInit = function() {
     xfbml: true,
     version: 'v2.7'
   });
-  ```
+```
 페이스북 엡 아이디를 입력, api 버전등 기본 설정 및 초기화
 
-  ```
+```
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
   });

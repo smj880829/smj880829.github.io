@@ -1,0 +1,48 @@
+---
+layout: post
+title:  "jade"
+date:   2016-07-29 15:33:09 +0900
+categories: [javis,jade]
+---
+제이드는 Haml로부터 큰 영향을 받은 고성능 템플릿 엔진이며 node를 위해 자바스크립트로 구현되었다.
+
+설치 방법
+```
+npm install jade
+```
+
+특징
+1. 들여쓰기를 기본으로 작성함.
+2. 가독성이 기존 HTML 보다 엄청 좋다.
+3. extends 나 include 를 통한 소스 제활용 모듈화 할수가 있다.
+4. 파라미터를 통해 소스내부를 동적으로 수정 가능하다.
+5. each 문을 통해 그리드 데이터를 입력 할수 있다.
+
+layout.jade
+```
+doctype html
+html(ng-app='mainApp')
+  head
+    title Main
+  body
+    block content
+```
+
+index.jade
+```
+extends layout
+
+block content
+  include nav
+  include right_slide
+  ng-view
+```
+
+index.jade 를 호출 하면 extends 를 통해 layout을 합하여 뷰 페이지가 완성된다.
+
+처음에는 사용하기 어려웠다.
+html 이 아닌 또 다른 언어를 익혀야 하는줄 알았지만
+금방 익숙해진다.
+
+
+하나의 뷰 틀을 재활용, 모듈화 시킬 수 있어서 굉장히 마음에 든다.
