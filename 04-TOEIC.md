@@ -7,7 +7,7 @@ permalink: /toeic/
 <h1 class="page-heading">angularJS, nodejs, express, bootstrap, etc..</h1>
 
 <ul class="post-list">
-  {% for post in site.categories.javis %}
+  {% for post in site.categories.toeic %}
     <li>
       <div class ='post_border'>
       <h1>
