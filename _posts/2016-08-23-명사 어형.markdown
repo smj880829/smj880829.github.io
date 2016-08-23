@@ -21,8 +21,11 @@ categories: toeic
 일반 N : -tion , -ment , -ness , -ce , -ure
 
 ### 유의해야할 명사 어형
-1. N + __________  I'll makr a customer satifsfied.  I'll keep customer satisfaction.
-2. N + N + N  satisfaction of customers is the top priority.
+1. N + __________  
+  I'll makr a customer satifsfied.  
+  I'll keep customer satisfaction.
+2. N + N + N  
+  satisfaction of customers is the top priority.
 
 ### 문제 풀이법
 1. ______ ~~ 접 ~~ ~~~~~
