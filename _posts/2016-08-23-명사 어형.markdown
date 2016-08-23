@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "명사 어형"
+date:   2016-08-23 00:00:00 +0900
+categories: toeic
+---
+​
+# 명사 (N) 어형
+
+## 품사 고르기
+1. 관사 / 소유격  +  (a)  **N**
+2. 동사 / 전치사  +  **N**
+3. **N**                      +  동사
+
+
+## 수량
+ a + ( N / Ns)   +  ( Vs / V)
+
+
+## 사람 N   vs    일반 N  
+해석으로 풀이
+사람 N : -ee , -or , -er , ist , -ant
+일반 N : -tion , -ment , -ness , -ce , -ure
+
+## 유의해야할 명사 어형
+1. N + __________  I'll makr a customer satifsfied.  I'll keep customer satisfaction.
+2. N + N + N  satisfaction of customers is the top priority.
+
+## 문제 풀이법
+1. ______ ~~접~~ ~~~~~
+2. ~~~~~ , ~~~~~ ______
+3. ~~-ly~~
+4. ~~단어~~ ~~-~~ ~~단어~~
