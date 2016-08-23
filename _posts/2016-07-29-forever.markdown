@@ -2,7 +2,7 @@
 layout: post
 title:  "forever"
 date:   2016-07-24 15:33:09 +0900
-categories: single_chat
+categories: [single_chat,javis]
 ---
 Installing locally
 
