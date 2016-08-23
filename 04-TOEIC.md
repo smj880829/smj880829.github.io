@@ -2,6 +2,7 @@
 layout: page
 title: TOEIC
 permalink: /toeic/
+wow: "토익"
 ---
 
 <h1 class="page-heading">뻐킹 토익</h1>
