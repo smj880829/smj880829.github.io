@@ -4,7 +4,7 @@ title: TOEIC
 permalink: /toeic/
 ---
 
-<h1 class="page-heading">angularJS, nodejs, express, bootstrap, etc..</h1>
+<h1 class="page-heading">뻐킹 토익</h1>
 
 <ul class="post-list">
   {% for post in site.categories.toeic %}
