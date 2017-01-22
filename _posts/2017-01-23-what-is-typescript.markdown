@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "express seting"
+title:  "what is typescript"
 date:   2017-01-23 15:33:09 +0900
 categories: [typescript]
 ---
