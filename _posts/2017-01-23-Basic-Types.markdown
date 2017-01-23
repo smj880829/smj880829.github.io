@@ -38,22 +38,22 @@ Another fundamental part of creating programs in JavaScript for webpages and ser
 
 #Array
 
-> let list: number[] = [1, 2, 3];
-> let list: Array<number> = [1, 2, 3];
+> let list: number[] = [1, 2, 3];   
+> let list: Array<number> = [1, 2, 3];   
 
 #Tuple
 
-> let x: [string, number];
-> x = ["hello", 10]; // OK
-> x = [10, "hello"]; // Error
+> let x: [string, number];   
+> x = ["hello", 10]; // OK   
+> x = [10, "hello"]; // Error   
 
 #Enum
 
-> enum Color {Red, Green, Blue};
-> let c: Color = Color.Green;
+> enum Color {Red, Green, Blue};   
+> let c: Color = Color.Green;   
 
 #Any
 
-> let notSure: any = 4;
-> notSure = "maybe a string instead";
-> notSure = false; // okay, definitely a boolean
+> let notSure: any = 4;   
+> notSure = "maybe a string instead";   
+> notSure = false; // okay, definitely a boolean   
