@@ -11,9 +11,9 @@ For programs to be useful, we need to be able to work with some of the simplest 
 
 #Boolean
 The most basic datatype is the simple true/false value, which JavaScript and TypeScript call a boolean value.  
-~~~
+```
 let isDone: boolean = false;  
-~~~  
+```     
  가장 기초적인 데이타타입은 참/거짓 값 또한 자바스크립트와 타입스크립트에서는 boolean 값이라 불린다  
 
 #Number
@@ -23,7 +23,7 @@ let decimal: number = 6;
 let hex: number = 0xf00d;
 let binary: number = 0b1010;
 let octal: number = 0o744;  
-```  
+```   
 자바스크립트에서 처럼 타입스크립트의 모든 숫자들은 부동소수점 값이다. 이러한 부동소수점 숫자들은 변수형 타입을 가진다. 추가로 16진수 10진수 글자들. 타입스크립트 또한 지원한다 2진수와 8진수 값들 ecmascript 2015에 나온것들.  
 
 #String
