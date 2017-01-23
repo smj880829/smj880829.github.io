@@ -11,9 +11,9 @@ For programs to be useful, we need to be able to work with some of the simplest 
 
 #Boolean
 The most basic datatype is the simple true/false value, which JavaScript and TypeScript call a boolean value.  
-```
+~~~
 let isDone: boolean = false;  
-```
+~~~
  가장 기초적인 데이타타입은 참/거짓 값 또한 자바스크립트와 타입스크립트에서는 boolean 값이라 불린다  
 
 #Number
